@@ -26,31 +26,33 @@ The app gives users one place to organize their personal reading collection and 
 
 ## 3. External API
 
-We will use the Open Library API to search for book information.
+We will use the Open Library Book Search API to search for book information.
 
-The API will be called by our Express server and will be used when users search for books.
+Documentation: https://openlibrary.org/dev/docs/api/search
 
-API name: Open Library API
+API key: No API key is required.
 
-API key: No API key is required for the planned requests.
+Rate limits and terms: Open Library's default rate limit is 1 request per second. Identified requests can receive up to 3 requests per second when the application uses a User-Agent that includes the application name and contact information. We will cache responses when possible and use the API for user searches instead of making bulk requests.
 
-Feature using the API: Users can search for books and get information such as the title, author, and publication year.
-
-We will follow the API's usage guidelines and rate limits.
+Feature using the API: A user can search for a book when adding a book to BookTrack. The app will use information from Open Library, such as the book title, author, and publication year, to help the user fill in the book information.
 
 Example request:
 
-```text
 https://openlibrary.org/search.json?q=harry+potter
 
 
-Example response:
+Example response, trimmed to the fields we will use:
 
 {
-  "title": "Harry Potter and the Philosopher's Stone",
-  "author_name": ["J. K. Rowling"],
-  "first_publish_year": 1997
+  "docs": [
+    {
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author_name": ["J. K. Rowling"],
+      "first_publish_year": 1997
+    }
+  ]
 }
+
 
 
 ## 4. Data Model
