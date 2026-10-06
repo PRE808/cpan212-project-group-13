@@ -40,11 +40,18 @@ We will follow the API's usage guidelines and rate limits.
 
 Example request:
 
-To be added after testing the API.
+```text
+https://openlibrary.org/search.json?q=harry+potter
+
 
 Example response:
 
-To be added after testing the API.
+{
+  "title": "Harry Potter and the Philosopher's Stone",
+  "author_name": ["J. K. Rowling"],
+  "first_publish_year": 1997
+}
+
 
 ## 4. Data Model
 
