@@ -103,14 +103,25 @@ Example response:
 
 ## 6. Wireframes
 
-The project will have four main pages:
+## 6. Wireframes
 
-1. Book List
-2. Book Detail
-3. Add Book
-4. Edit Book
+### Page 1 - Book List
 
-The wireframes are included in the docs/wireframes folder.
+![Book List](wireframes/page1.png)
+
+### Page 2 - Book Detail
+
+![Book Detail](wireframes/page2.png)
+
+### Page 3 - Add Book
+
+![Add Book](wireframes/page3.png)
+
+### Page 4 - Edit Book
+
+![Edit Book](wireframes/page4.png)
+
+
 
 ## 7. Team Roles
 
